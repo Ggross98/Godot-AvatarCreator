@@ -7,6 +7,12 @@ public partial class AvatarData : Resource
 	public Color Background { get; set; } = new(0.23392546f, 0.23392546f, 0.23392543f);
 
 	[Export]
+	public Color SkinColor { get; set; } = Colors.White;
+
+	[Export]
+	public Color HairColor { get; set; } = new(0.62f, 0.40f, 0.22f);
+
+	[Export]
 	public string BackHair { get; set; } = "";
 
 	[Export]

@@ -40,7 +40,7 @@ public partial class Avatar : Control
 			if (!_layers.TryGetValue(part, out var layer))
 				continue;
 
-			ApplyLayer(layer, part, data.GetPartId(part));
+			ApplyLayer(layer, part, data.GetPartId(part), GetLayerModulate(part, data));
 		}
 	}
 
@@ -80,7 +80,16 @@ public partial class Avatar : Control
 		}
 	}
 
-	private static void ApplyLayer(TextureRect layer, string part, string id)
+	private static Color GetLayerModulate(string part, AvatarData data)
+	{
+		if (AvatarCatalog.IsSkinPart(part))
+			return data.SkinColor;
+		if (AvatarCatalog.IsHairPart(part))
+			return data.HairColor;
+		return Colors.White;
+	}
+
+	private static void ApplyLayer(TextureRect layer, string part, string id, Color modulate)
 	{
 		if (string.IsNullOrEmpty(id))
 		{
@@ -97,12 +106,14 @@ public partial class Avatar : Control
 		}
 
 		layer.Texture = GD.Load<Texture2D>(path);
+		layer.Modulate = modulate;
 		layer.Visible = true;
 	}
 
 	private static void HideLayer(TextureRect layer)
 	{
 		layer.Texture = null;
+		layer.Modulate = Colors.White;
 		layer.Visible = false;
 	}
 }

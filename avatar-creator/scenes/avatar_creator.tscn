@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://y3wknrqfyxxs" path="res://prefabs/avatar.tscn" id="1_d88xq"]
 [ext_resource type="LabelSettings" uid="uid://db6d75h4gd21c" path="res://resources/my_label_settings.tres" id="2_keb0d"]
 [ext_resource type="ButtonGroup" uid="uid://csq0lrs454pt" path="res://resources/gender_button_group.tres" id="3_qamg6"]
-[ext_resource type="Script" path="res://scripts/AvatarCreator.cs" id="4_creator"]
+[ext_resource type="Script" uid="uid://uvke88qnh24q" path="res://scripts/AvatarCreator.cs" id="4_creator"]
 
 [node name="AvatarCreator" type="Node2D" unique_id=736374811]
 script = ExtResource("4_creator")
@@ -25,8 +25,8 @@ offset_bottom = -304.0
 layout_mode = 0
 offset_left = 975.0
 offset_top = 275.0
-offset_right = 1272.0
-offset_bottom = 820.0
+offset_right = 1450.0
+offset_bottom = 920.0
 
 [node name="Gender" type="HBoxContainer" parent="Control/AvatarSelection" unique_id=1625770773]
 layout_mode = 2
@@ -81,6 +81,22 @@ custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = " > "
+
+[node name="SkinColor" type="HBoxContainer" parent="Control/AvatarSelection" unique_id=2000000071]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/AvatarSelection/SkinColor" unique_id=2000000072]
+custom_minimum_size = Vector2(105, 0)
+layout_mode = 2
+text = "肤色"
+label_settings = ExtResource("2_keb0d")
+
+[node name="Panel" type="PanelContainer" parent="Control/AvatarSelection/SkinColor" unique_id=2000000073]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Swatches" type="HBoxContainer" parent="Control/AvatarSelection/SkinColor/Panel" unique_id=2000000074]
+layout_mode = 2
 
 [node name="Eyes" type="HBoxContainer" parent="Control/AvatarSelection" unique_id=2000000001]
 layout_mode = 2
@@ -255,6 +271,22 @@ custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = " > "
+
+[node name="HairColor" type="HBoxContainer" parent="Control/AvatarSelection" unique_id=2000000081]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/AvatarSelection/HairColor" unique_id=2000000082]
+custom_minimum_size = Vector2(105, 0)
+layout_mode = 2
+text = "发色"
+label_settings = ExtResource("2_keb0d")
+
+[node name="Panel" type="PanelContainer" parent="Control/AvatarSelection/HairColor" unique_id=2000000083]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Swatches" type="HBoxContainer" parent="Control/AvatarSelection/HairColor/Panel" unique_id=2000000084]
+layout_mode = 2
 
 [node name="Clothes" type="HBoxContainer" parent="Control/AvatarSelection" unique_id=2000000061]
 layout_mode = 2
