@@ -15,6 +15,9 @@ public static class AvatarCatalog
 	public const string Mouth = "mouth";
 	public const string FrontHair = "fronthair";
 
+	public const string MaleGender = "man";
+	public const string FemaleGender = "woman";
+
 	public static readonly string[] Parts =
 	{
 		BackHair, Face, Clothes, Eyes, Eyebrows, Nose, Mouth, FrontHair
@@ -49,6 +52,31 @@ public static class AvatarCatalog
 		dir.ListDirEnd();
 		ids.Sort(StringComparer.Ordinal);
 		return ids.ToArray();
+	}
+
+	public static string[] GetIds(string part, string gender)
+	{
+		var prefix = gender + "_";
+		var ids = GetIds(part);
+		var filtered = new List<string>();
+		foreach (var id in ids)
+		{
+			if (id.StartsWith(prefix, StringComparison.OrdinalIgnoreCase))
+				filtered.Add(id);
+		}
+
+		return filtered.ToArray();
+	}
+
+	public static bool HasGenderAssets(string gender)
+	{
+		foreach (var part in Parts)
+		{
+			if (GetIds(part, gender).Length > 0)
+				return true;
+		}
+
+		return false;
 	}
 
 	public static AvatarData CreateRandom(RandomNumberGenerator rng = null)

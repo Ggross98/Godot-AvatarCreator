@@ -45,4 +45,36 @@ public partial class AvatarData : Resource
 			_ => ""
 		};
 	}
+
+	public void SetPartId(string part, string id)
+	{
+		id ??= "";
+		switch (part)
+		{
+			case AvatarCatalog.BackHair:
+				BackHair = id;
+				break;
+			case AvatarCatalog.Face:
+				Face = id;
+				break;
+			case AvatarCatalog.Clothes:
+				Clothes = id;
+				break;
+			case AvatarCatalog.Eyes:
+				Eyes = id;
+				break;
+			case AvatarCatalog.Eyebrows:
+				Eyebrows = id;
+				break;
+			case AvatarCatalog.Nose:
+				Nose = id;
+				break;
+			case AvatarCatalog.Mouth:
+				Mouth = id;
+				break;
+			case AvatarCatalog.FrontHair:
+				FrontHair = id;
+				break;
+		}
+	}
 }
