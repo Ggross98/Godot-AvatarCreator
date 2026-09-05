@@ -121,8 +121,21 @@ public partial class AvatarCreator : Node2D
 
 		public void Load(string gender)
 		{
-			_ids = AvatarCatalog.GetIds(Part, gender);
-			_index = 0;
+			var ids = AvatarCatalog.GetIds(Part, gender);
+			if (AvatarCatalog.AllowsNone(Part))
+			{
+				var withNone = new string[ids.Length + 1];
+				withNone[0] = "";
+				ids.CopyTo(withNone, 1);
+				_ids = withNone;
+				_index = ids.Length > 0 ? 1 : 0;
+			}
+			else
+			{
+				_ids = ids;
+				_index = 0;
+			}
+
 			RefreshView();
 		}
 
@@ -141,7 +154,20 @@ public partial class AvatarCreator : Node2D
 		private void RefreshView()
 		{
 			var count = _ids.Length;
-			_number.Text = count == 0 ? "0/0" : $"{_index + 1}/{count}";
+			if (count == 0)
+			{
+				_number.Text = "0/0";
+			}
+			else if (string.IsNullOrEmpty(CurrentId))
+			{
+				_number.Text = "无";
+			}
+			else
+			{
+				var noneOffset = AvatarCatalog.AllowsNone(Part) ? 1 : 0;
+				_number.Text = $"{_index - noneOffset + 1}/{count - noneOffset}";
+			}
+
 			_previous.Disabled = count <= 1;
 			_next.Disabled = count <= 1;
 		}

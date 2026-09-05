@@ -23,6 +23,11 @@ public static class AvatarCatalog
 		BackHair, Face, Clothes, Eyes, Eyebrows, Nose, Mouth, FrontHair
 	};
 
+	public static bool AllowsNone(string part)
+	{
+		return part is Eyebrows or FrontHair or BackHair;
+	}
+
 	public static string GetTexturePath(string part, string id)
 	{
 		return $"{Root}/{part}/{id}.png";

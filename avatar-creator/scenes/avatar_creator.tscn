@@ -245,7 +245,7 @@ text = " < "
 [node name="Number" type="Label" parent="Control/AvatarSelection/BackHair" unique_id=2000000054]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
-text = "1/1"
+text = "无"
 label_settings = ExtResource("2_keb0d")
 horizontal_alignment = 1
 vertical_alignment = 1
