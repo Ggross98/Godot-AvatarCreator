@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://dfs1lo2cofnx5"]
+
+[ext_resource type="PackedScene" uid="uid://y3wknrqfyxxs" path="res://prefabs/avatar.tscn" id="1_d88xq"]
+[ext_resource type="LabelSettings" uid="uid://db6d75h4gd21c" path="res://resources/my_label_settings.tres" id="2_keb0d"]
+[ext_resource type="ButtonGroup" uid="uid://csq0lrs454pt" path="res://resources/gender_button_group.tres" id="3_qamg6"]
+
+[node name="AvatarCreator" type="Node2D" unique_id=736374811]
+
+[node name="Control" type="Control" parent="." unique_id=1319346184]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="avatar" parent="Control" unique_id=673301253 instance=ExtResource("1_d88xq")]
+layout_mode = 1
+offset_left = 230.0
+offset_top = 269.0
+offset_right = -1178.0
+offset_bottom = -299.0
+
+[node name="AvatarSelection" type="VBoxContainer" parent="Control" unique_id=283714669]
+layout_mode = 0
+offset_left = 930.0
+offset_top = 279.0
+offset_right = 1179.0
+offset_bottom = 345.0
+
+[node name="Gender" type="HBoxContainer" parent="Control/AvatarSelection" unique_id=1625770773]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/AvatarSelection/Gender" unique_id=1539313406]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "性别"
+label_settings = ExtResource("2_keb0d")
+
+[node name="CheckButton" type="CheckButton" parent="Control/AvatarSelection/Gender" unique_id=851123674]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+button_group = ExtResource("3_qamg6")
+text = "男"
+
+[node name="CheckButton2" type="CheckButton" parent="Control/AvatarSelection/Gender" unique_id=936588933]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+button_group = ExtResource("3_qamg6")
+text = "女"
+
+[node name="Face" type="HBoxContainer" parent="Control/AvatarSelection" unique_id=1936548546]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/AvatarSelection/Face" unique_id=1657651124]
+custom_minimum_size = Vector2(105, 0)
+layout_mode = 2
+text = "脸型"
+label_settings = ExtResource("2_keb0d")
+
+[node name="Button" type="Button" parent="Control/AvatarSelection/Face" unique_id=791075622]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = " < "
+
+[node name="Label2" type="Label" parent="Control/AvatarSelection/Face" unique_id=597133973]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "00"
+label_settings = ExtResource("2_keb0d")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button2" type="Button" parent="Control/AvatarSelection/Face" unique_id=1164928506]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = " > "

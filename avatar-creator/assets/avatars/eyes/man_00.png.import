@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bctdixeesmknn"
-path="res://.godot/imported/man_00.png-2fa9f9ab3cc70a65bfaaf3940c88b85b.ctex"
+uid="uid://6bi5t2ylga43"
+path="res://.godot/imported/man_00.png-90a55526af80540d49ed945361c3c2c3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/avatar/fronthair/man_00.png"
-dest_files=["res://.godot/imported/man_00.png-2fa9f9ab3cc70a65bfaaf3940c88b85b.ctex"]
+source_file="res://assets/avatars/eyes/man_00.png"
+dest_files=["res://.godot/imported/man_00.png-90a55526af80540d49ed945361c3c2c3.ctex"]
 
 [params]
 

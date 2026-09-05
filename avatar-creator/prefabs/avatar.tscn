@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://y3wknrqfyxxs"]
 
 [ext_resource type="Script" uid="uid://dwo0bamb4q5yw" path="res://scripts/Avatar.cs" id="1_q7xoa"]
-[ext_resource type="Texture2D" uid="uid://cus78hcjc058f" path="res://assets/avatar/face/man_00.png" id="2_at3rj"]
-[ext_resource type="Texture2D" uid="uid://buqirg21jqsqd" path="res://assets/avatar/clothes/man_00.png" id="3_gqrco"]
-[ext_resource type="Texture2D" uid="uid://6bi5t2ylga43" path="res://assets/avatar/eyes/man_00.png" id="4_hrr3p"]
-[ext_resource type="Texture2D" uid="uid://c0avt6a5xlg1l" path="res://assets/avatar/nose/man_00.png" id="5_gfmu1"]
-[ext_resource type="Texture2D" uid="uid://gmpco242ydyq" path="res://assets/avatar/eyebrows/man_00.png" id="6_eyebrows"]
-[ext_resource type="Texture2D" uid="uid://ipi2egwkw44b" path="res://assets/avatar/mouth/man_00.png" id="6_by68m"]
-[ext_resource type="Texture2D" uid="uid://bctdixeesmknn" path="res://assets/avatar/fronthair/man_00.png" id="7_5ge24"]
+[ext_resource type="Texture2D" uid="uid://cus78hcjc058f" path="res://assets/avatars/face/man_00.png" id="2_at3rj"]
+[ext_resource type="Texture2D" uid="uid://buqirg21jqsqd" path="res://assets/avatars/clothes/man_00.png" id="3_gqrco"]
+[ext_resource type="Texture2D" uid="uid://6bi5t2ylga43" path="res://assets/avatars/eyes/man_00.png" id="4_hrr3p"]
+[ext_resource type="Texture2D" uid="uid://c0avt6a5xlg1l" path="res://assets/avatars/nose/man_00.png" id="5_gfmu1"]
+[ext_resource type="Texture2D" uid="uid://ipi2egwkw44b" path="res://assets/avatars/mouth/man_00.png" id="6_by68m"]
+[ext_resource type="Texture2D" uid="uid://gmpco242ydyq" path="res://assets/avatars/eyebrows/man_00.png" id="6_eyebrows"]
+[ext_resource type="Texture2D" uid="uid://bctdixeesmknn" path="res://assets/avatars/fronthair/man_00.png" id="7_5ge24"]
 
-[node name="avatar" type="Control" unique_id=673301253]
+[node name="Avatar" type="Control" unique_id=673301253]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

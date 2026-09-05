@@ -4,7 +4,7 @@ using Godot;
 
 public static class AvatarCatalog
 {
-	public const string Root = "res://assets/avatar";
+	public const string Root = "res://assets/avatars";
 
 	public const string BackHair = "backhair";
 	public const string Face = "face";
