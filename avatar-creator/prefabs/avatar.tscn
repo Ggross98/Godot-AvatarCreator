@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://y3wknrqfyxxs"]
+
+[ext_resource type="Script" uid="uid://dwo0bamb4q5yw" path="res://scripts/Avatar.cs" id="1_q7xoa"]
+[ext_resource type="Texture2D" uid="uid://cus78hcjc058f" path="res://assets/avatar/face/man_00.png" id="2_at3rj"]
+[ext_resource type="Texture2D" uid="uid://buqirg21jqsqd" path="res://assets/avatar/clothes/man_00.png" id="3_gqrco"]
+[ext_resource type="Texture2D" uid="uid://6bi5t2ylga43" path="res://assets/avatar/eyes/man_00.png" id="4_hrr3p"]
+[ext_resource type="Texture2D" uid="uid://c0avt6a5xlg1l" path="res://assets/avatar/nose/man_00.png" id="5_gfmu1"]
+[ext_resource type="Texture2D" uid="uid://gmpco242ydyq" path="res://assets/avatar/eyebrows/man_00.png" id="6_eyebrows"]
+[ext_resource type="Texture2D" uid="uid://ipi2egwkw44b" path="res://assets/avatar/mouth/man_00.png" id="6_by68m"]
+[ext_resource type="Texture2D" uid="uid://bctdixeesmknn" path="res://assets/avatar/fronthair/man_00.png" id="7_5ge24"]
+
+[node name="avatar" type="Control" unique_id=673301253]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -640.0
+offset_bottom = -136.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q7xoa")
+
+[node name="background" type="ColorRect" parent="." unique_id=171198725]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.23392546, 0.23392546, 0.23392543, 1)
+
+[node name="backhair" type="TextureRect" parent="." unique_id=235479709]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="face" type="TextureRect" parent="." unique_id=1020226500]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_at3rj")
+expand_mode = 1
+
+[node name="clothes" type="TextureRect" parent="." unique_id=1431577582]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_gqrco")
+expand_mode = 1
+
+[node name="eyes" type="TextureRect" parent="." unique_id=1675169832]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_hrr3p")
+expand_mode = 1
+
+[node name="eyebrows" type="TextureRect" parent="." unique_id=155685688]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_eyebrows")
+expand_mode = 1
+
+[node name="nose" type="TextureRect" parent="." unique_id=876911193]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_gfmu1")
+expand_mode = 1
+
+[node name="mouth" type="TextureRect" parent="." unique_id=1762692166]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_by68m")
+expand_mode = 1
+
+[node name="fronthair" type="TextureRect" parent="." unique_id=854555563]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_5ge24")
+expand_mode = 1

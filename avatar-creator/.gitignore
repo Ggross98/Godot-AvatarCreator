@@ -1,0 +1,8 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# .NET restore/build output (IDE design-time assets live here)
+[Bb]in/
+[Oo]bj/*
+!obj/.gdignore
